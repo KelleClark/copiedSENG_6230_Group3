@@ -48,6 +48,7 @@
           display: block;
           padding: 4px 8px;
           text-decoration: none;
+          vertical-align: middle;
         }
 
     </style>
@@ -72,10 +73,13 @@
             
             <asp:DropDownList ID="ddlSubject" runat="server" AutoPostBack="true" CssClass="dropDown" OnSelectedIndexChanged="ddlSubject_SelectedIndexChanged">
                 <asp:ListItem Text="Math" Value="Math" />
+                <asp:ListItem Text="Computer Science" Value="Computer Science" />
             </asp:DropDownList>
-            <h2 class="right">Subject:</h2>
-            
+            <h2 class="right">Subject:</h2>        
+        </div>
 
+        <div class="main">
+            <asp:GridView ID="GridView1" runat="server"> </asp:GridView> 
         </div>
     </form>
 

@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\VideoDatabase.mdf" />
+    <Content Include="App_Data\VideoDatabase_log.ldf">
+      <DependentUpon>VideoDatabase.mdf</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Main.aspx" />
   </ItemGroup>
