@@ -65,7 +65,7 @@
         
         function openPopupWindow() {  
             //Open the popup page  
-            window.open('AddVideo.aspx', 'AddVideo', 'resizable=no,width=200,height=400');  
+            window.open('AddVideo.aspx', 'AddVideo', 'resizable=no,width=400,height=400');  
    }  
     </script>  
 

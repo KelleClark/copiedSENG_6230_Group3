@@ -15,7 +15,10 @@
 <body>
     <form id="form1" runat="server">
         <div class="AddVideo">
-            <table class="auto-style1">  
+            <table class="auto-style1">
+                <tr>
+                    <td> <h2>Add Video</h2> </td>
+                </tr>
                 <tr>  
                     <td>Video Subject</td>  
                     <td>  
@@ -35,7 +38,7 @@
                 </tr>   
                 <tr>  
                     <td>  
-                        <asp:Button ID="Button1" runat="server" Text="Button" />  
+                        <asp:Button ID="Button1" runat="server" Text="Add" />  
                     </td>  
                 </tr>  
             </table>  
