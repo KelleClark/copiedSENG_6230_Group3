@@ -22,23 +22,37 @@
                 <tr>  
                     <td>Video Subject</td>  
                     <td>  
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>  
+                        <asp:TextBox ID="TextBoxSubject" runat="server"></asp:TextBox> 
+                        <asp:requiredfieldvalidator id="rfvSubject" runat="server" errormessage="*" ForeColor="Red" controltovalidate="TextBoxSubject"></asp:requiredfieldvalidator>
                     </td>  
   
                </tr>  
                 <tr>  
                     <td>Video Topic</td>  
-                     <td> <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>  
+                     <td> 
+                         <asp:TextBox ID="TextBoxTopic" runat="server"></asp:TextBox>
+                         <asp:requiredfieldvalidator id="rfvTopic" runat="server" errormessage="*" ForeColor="Red" controltovalidate="TextBoxTopic"></asp:requiredfieldvalidator>
+                     </td>
+                     
                 </tr>  
                 <tr>  
                     <td>Youtube Embed URL</td>  
                     <td>  
-                        <asp:TextBox ID="TextBox3" runat="server" TextMode="Password"></asp:TextBox>  
+                        <asp:TextBox ID="TextBoxLink" runat="server"></asp:TextBox> 
+                        <asp:requiredfieldvalidator id="rfvLink" runat="server" errormessage="*" ForeColor="Red" controltovalidate="TextBoxLink"></asp:requiredfieldvalidator>
                     </td>  
                 </tr>   
                 <tr>  
                     <td>  
-                        <asp:Button ID="Button1" runat="server" Text="Add" />  
+                        <asp:Button ID="Button1" runat="server" Text="Add" onclick="btnAdd_ClientClick" />  
+                    </td>
+                    <td>  
+                        <asp:Button ID="Button2" runat="server" Text="Close" onclick="btnClose_ClientClick" />  
+                    </td> 
+                </tr>
+                <tr>  
+                    <td>  
+                        <asp:Label ID="lblMessage" runat="server" />  
                     </td>  
                 </tr>  
             </table>  
