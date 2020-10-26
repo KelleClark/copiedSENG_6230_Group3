@@ -68,6 +68,7 @@
         <div class="pageHeader">
             <h1>PeerEd</h1>
             <p>A website created by students for students.</p>
+        <asp:Button ID="btnAddVideo" runat="server" Text="Add Video" OnClientClick="window.open('AddVideo.aspx');return false;"/>
         </div>
 
         <div class="navbar">
