@@ -19,30 +19,46 @@ namespace PeerEd
         {
             selectedSubject = ddlSubject.SelectedItem.Text;
             selectedTopic = ddlTopic.SelectedItem.Text;
-            GridView1.DataSource = getVideos(selectedSubject, selectedTopic);
-            GridView1.DataBind();
+            
+            Panel1.Controls.Clear();
+            embedVideos();
+        }
+
+        protected void embedVideos()
+        {
+            List<string> videoList = new List<string>();
+            videoList = getVideosAttribute(selectedSubject, selectedTopic, "Link");
+
+            for (int i = 0; i < videoList.Count(); i++)
+            {
+                var videoFrame = new Literal();
+                videoFrame.Text = string.Format(@"<iframe width=""560"" height=""340"" src=""{0}"" frameborder=""0"" allowfullscreen></iframe>", videoList[i]);
+                Panel1.Controls.Add(videoFrame);
+                Panel1.Controls.Add(new LiteralControl("<br /> <br />"));
+            }
+                
         }
 
         protected void ddlTopic_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedTopic = ddlTopic.SelectedItem.Text;
-            List<string> videoList = new List<string>();
-            videoList = getVideos(selectedSubject, selectedTopic);
-            GridView1.DataSource = videoList;
-            GridView1.DataBind();
+            Panel1.Controls.Clear();
+            embedVideos();
 
         }
 
         protected void ddlSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedSubject = ddlSubject.SelectedItem.Text;
+            Panel1.Controls.Clear();
+            embedVideos();
         }
 
-        private List<string> getVideos(string subject, string topic)
+        private List<string> getVideosAttribute(string subject, string topic, string attribute)
         {
             List<string> videoList = new List<string>();
 
-            string sql = "SELECT Title FROM Videos WHERE Subject = @subject AND Topic =  @topic";
+            string sql = "SELECT " + attribute + " FROM Videos WHERE Subject = @subject AND Topic =  @topic";
             SqlConnection cnn = new SqlConnection(connectionString);
             SqlDataReader dataReader;
             SqlCommand command;
@@ -62,7 +78,7 @@ namespace PeerEd
                 cnn.Close();
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }

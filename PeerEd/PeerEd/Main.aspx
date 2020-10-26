@@ -51,6 +51,14 @@
           vertical-align: middle;
         }
 
+        .addButton  {
+            float:left
+        }
+
+        .main  {
+            padding: 80px;
+        }
+
     </style>
 
 </head>
@@ -79,7 +87,9 @@
         </div>
 
         <div class="main">
-            <asp:GridView ID="GridView1" runat="server"> </asp:GridView> 
+
+            <br />
+            <asp:Panel ID="Panel1" runat="server" HorizontalAlign="Center"></asp:Panel>
         </div>
     </form>
 
