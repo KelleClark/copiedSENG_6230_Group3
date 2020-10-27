@@ -58,7 +58,8 @@ namespace PeerEd
         {
             List<string> videoList = new List<string>();
 
-            string sql = "SELECT " + attribute + " FROM Videos WHERE Subject = @subject AND Topic =  @topic";
+            string sql = "SELECT " + attribute + " FROM Videos INNER JOIN Topics ON Videos.Topic_ID = Topics.Topic_ID WHERE Subject = @subject AND Name =  @topic";
+
             SqlConnection cnn = new SqlConnection(connectionString);
             SqlDataReader dataReader;
             SqlCommand command;
