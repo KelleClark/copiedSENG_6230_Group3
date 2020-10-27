@@ -11,7 +11,7 @@ namespace PeerEd
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        public static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\PeerEd\App_Data\VideoDatabase.mdf;Integrated Security=True";
+        public static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\ECU\Class\SoftwareEngineering\PeerEd\PeerEd_1\PeerEd\PeerEd\App_Data\VideoDatabase.mdf;Integrated Security=True";
         string selectedTopic = "";
         string selectedSubject = "";
 

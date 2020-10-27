@@ -115,3 +115,4 @@ E:\ECU\Class\SoftwareEngineering\PeerEd\PeerEd_1\PeerEd\PeerEd\obj\Debug\PeerEd.
 E:\ECU\Class\SoftwareEngineering\PeerEd\PeerEd_1\PeerEd\PeerEd\obj\Debug\PeerEd.csproj.CopyComplete
 E:\ECU\Class\SoftwareEngineering\PeerEd\PeerEd_1\PeerEd\PeerEd\obj\Debug\PeerEd.dll
 E:\ECU\Class\SoftwareEngineering\PeerEd\PeerEd_1\PeerEd\PeerEd\obj\Debug\PeerEd.pdb
+E:\ECU\Class\SoftwareEngineering\PeerEd\PeerEd_1\PeerEd\PeerEd\obj\Debug\PeerEd.csprojAssemblyReference.cache
