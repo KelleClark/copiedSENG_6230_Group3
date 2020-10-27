@@ -11,17 +11,33 @@ namespace PeerEd
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        public static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\PeerEd\App_Data\VideoDatabase.mdf;Integrated Security=True";
+        public static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DAVISS17\source\repos\SENG_6230_Group3\PeerEd\PeerEd\App_Data\VideoDatabase.mdf;Integrated Security=True";
         string selectedTopic = "";
         string selectedSubject = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            List<string> subjectList = new List<string>();
+            subjectList = getSubjects();
+            ddlSubject.DataSource = subjectList;
+
+            List<string> topicList = new List<string>();
+            topicList = getTopics();
+            ddlTopic.DataSource = topicList;
+
+            if (!IsPostBack)
+            {
+                ddlSubject.DataBind();
+                ddlTopic.DataBind();
+            }
+
             selectedSubject = ddlSubject.SelectedItem.Text;
             selectedTopic = ddlTopic.SelectedItem.Text;
             
             Panel1.Controls.Clear();
             embedVideos();
+
+            
         }
 
         protected void embedVideos()
@@ -49,7 +65,7 @@ namespace PeerEd
 
         protected void ddlSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedSubject = ddlSubject.SelectedItem.Text;
+            selectedSubject = ddlSubject.SelectedItem.Text;
             Panel1.Controls.Clear();
             embedVideos();
         }
@@ -85,6 +101,68 @@ namespace PeerEd
             }
 
             return videoList;
+        }
+
+        private List<string> getSubjects()
+        {
+            List<string> subjectList = new List<string>();
+
+            string sql = "SELECT DISTINCT Subject FROM Videos";
+
+            SqlConnection cnn = new SqlConnection(connectionString);
+            SqlDataReader dataReader;
+            SqlCommand command;
+            try
+            {
+                cnn.Open();
+                command = new SqlCommand(sql, cnn);
+                dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    subjectList.Add(dataReader.GetValue(0).ToString());
+                }
+                dataReader.Close();
+                command.Dispose();
+                cnn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return subjectList;
+        }
+
+        private List<string> getTopics()
+        {
+            List<string> topicList = new List<string>();
+
+            string sql = "SELECT DISTINCT Name FROM Topics ";
+
+            SqlConnection cnn = new SqlConnection(connectionString);
+            SqlDataReader dataReader;
+            SqlCommand command;
+            try
+            {
+                cnn.Open();
+                command = new SqlCommand(sql, cnn);
+                dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    topicList.Add(dataReader.GetValue(0).ToString());
+                }
+                dataReader.Close();
+                command.Dispose();
+                cnn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return topicList;
         }
     }
 }

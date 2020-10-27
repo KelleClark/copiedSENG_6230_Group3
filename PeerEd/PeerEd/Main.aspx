@@ -82,15 +82,11 @@
         <div class="navbar">
             <h2>Videos</h2>
 
-            <asp:DropDownList ID="ddlTopic" runat="server" AutoPostBack="true" CssClass="dropDown" OnSelectedIndexChanged="ddlTopic_SelectedIndexChanged">
-                <asp:ListItem Text="Algebra" Value="Algebra" />
-                <asp:ListItem Text="Business Calculus" Value="Business Calculus" />
+            <asp:DropDownList ID="ddlTopic" runat="server" AutoPostBack="true" CssClass="dropDown" onselectedindexchanged="ddlTopic_SelectedIndexChanged">
             </asp:DropDownList>
             <h2 class="right">Topic:</h2>
             
-            <asp:DropDownList ID="ddlSubject" runat="server" AutoPostBack="true" CssClass="dropDown" OnSelectedIndexChanged="ddlSubject_SelectedIndexChanged">
-                <asp:ListItem Text="Math" Value="Math" />
-                <asp:ListItem Text="Computer Science" Value="Computer Science" />
+            <asp:DropDownList ID="ddlSubject" runat="server" AutoPostBack="true" CssClass="dropDown" onselectedindexchanged="ddlSubject_SelectedIndexChanged">
             </asp:DropDownList>
             <h2 class="right">Subject:</h2>        
         </div>
