@@ -51,7 +51,23 @@
           vertical-align: middle;
         }
 
+        .addButton  {
+            float:left
+        }
+
+        .main  {
+            padding: 80px;
+        }
+
     </style>
+
+    <script>
+        
+        function openPopupWindow() {  
+            //Open the popup page  
+            window.open('AddVideo.aspx', 'AddVideo', 'resizable=no,width=400,height=400');  
+   }  
+    </script>  
 
 </head>
 
@@ -60,26 +76,25 @@
         <div class="pageHeader">
             <h1>PeerEd</h1>
             <p>A website created by students for students.</p>
+        <asp:Button ID="btnAddVideo" runat="server" Text="Add Video" OnClientClick="openPopupWindow();return false;"/>
         </div>
 
         <div class="navbar">
             <h2>Videos</h2>
 
-            <asp:DropDownList ID="ddlTopic" runat="server" AutoPostBack="true" CssClass="dropDown" OnSelectedIndexChanged="ddlTopic_SelectedIndexChanged">
-                <asp:ListItem Text="Algebra" Value="Algebra" />
-                <asp:ListItem Text="Business Calculus" Value="Business Calculus" />
+            <asp:DropDownList ID="ddlTopic" runat="server" AutoPostBack="true" CssClass="dropDown" onselectedindexchanged="ddlTopic_SelectedIndexChanged">
             </asp:DropDownList>
             <h2 class="right">Topic:</h2>
             
-            <asp:DropDownList ID="ddlSubject" runat="server" AutoPostBack="true" CssClass="dropDown" OnSelectedIndexChanged="ddlSubject_SelectedIndexChanged">
-                <asp:ListItem Text="Math" Value="Math" />
-                <asp:ListItem Text="Computer Science" Value="Computer Science" />
+            <asp:DropDownList ID="ddlSubject" runat="server" AutoPostBack="true" CssClass="dropDown" onselectedindexchanged="ddlSubject_SelectedIndexChanged">
             </asp:DropDownList>
             <h2 class="right">Subject:</h2>        
         </div>
 
         <div class="main">
-            <asp:GridView ID="GridView1" runat="server"> </asp:GridView> 
+
+            <br />
+            <asp:Panel ID="Panel1" runat="server" HorizontalAlign="Center"></asp:Panel>
         </div>
     </form>
 
