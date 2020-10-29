@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PeerEd",
+    "\\PeerEd\\PeerEd",
+    "\\PeerEd\\PeerEd\\Content"
   ],
+  "SelectedNode": "\\PeerEd\\PeerEd.sln",
   "PreviewInSolutionExplorer": false
 }
