@@ -111,7 +111,6 @@ C:\Users\17046\source\repos\SENG_6230_Group3\PeerEd\PeerEd\bin\roslyn\VBCSCompil
 C:\Users\17046\source\repos\SENG_6230_Group3\PeerEd\PeerEd\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\17046\source\repos\SENG_6230_Group3\PeerEd\PeerEd\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\17046\source\repos\SENG_6230_Group3\PeerEd\PeerEd\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\17046\source\repos\SENG_6230_Group3\PeerEd\PeerEd\obj\Debug\PeerEd.csprojAssemblyReference.cache
 C:\Users\17046\source\repos\SENG_6230_Group3\PeerEd\PeerEd\obj\Debug\PeerEd.csproj.CoreCompileInputs.cache
 C:\Users\17046\source\repos\SENG_6230_Group3\PeerEd\PeerEd\obj\Debug\PeerEd.csproj.CopyComplete
 C:\Users\17046\source\repos\SENG_6230_Group3\PeerEd\PeerEd\obj\Debug\PeerEd.dll
