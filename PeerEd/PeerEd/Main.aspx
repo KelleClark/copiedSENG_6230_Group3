@@ -52,7 +52,7 @@
         }
 
         .addButton  {
-            float:left
+            float:left;
         }
 
         .main  {

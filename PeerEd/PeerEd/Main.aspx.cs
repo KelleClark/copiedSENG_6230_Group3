@@ -45,14 +45,16 @@ namespace PeerEd
             List<string> videoList = new List<string>();
             videoList = getVideosAttribute(selectedSubject, selectedTopic, "Link");
 
-            for (int i = 0; i < videoList.Count(); i++)
+            if(videoList.Count != 0)
             {
-                var videoFrame = new Literal();
-                videoFrame.Text = string.Format(@"<iframe width=""560"" height=""340"" src=""{0}"" frameborder=""0"" allowfullscreen></iframe>", videoList[i]);
-                Panel1.Controls.Add(videoFrame);
-                Panel1.Controls.Add(new LiteralControl("<br /> <br />"));
-            }
-                
+                for (int i = 0; i < videoList.Count(); i++)
+                {
+                    var videoFrame = new Literal();
+                    videoFrame.Text = string.Format(@"<iframe width=""560"" height=""340"" src=""{0}"" frameborder=""0"" allowfullscreen></iframe>", videoList[i]);
+                    Panel1.Controls.Add(videoFrame);
+                    Panel1.Controls.Add(new LiteralControl("<br /> <br />"));
+                }
+            }              
         }
 
         protected void ddlTopic_SelectedIndexChanged(object sender, EventArgs e)

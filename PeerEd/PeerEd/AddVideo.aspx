@@ -45,9 +45,6 @@
                 <tr>  
                     <td>  
                         <asp:Button ID="Button1" runat="server" Text="Add" onclick="btnAdd_ClientClick" />  
-                    </td>
-                    <td>  
-                        <asp:Button ID="Button2" runat="server" Text="Close" onclick="btnClose_ClientClick" />  
                     </td> 
                 </tr>
                 <tr>  

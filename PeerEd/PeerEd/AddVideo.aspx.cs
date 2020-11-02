@@ -6,6 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Security.Principal;
+using System.Data;
+using System.Net;
+using System.Net.Sockets;
 
 namespace PeerEd
 {
@@ -22,40 +25,37 @@ namespace PeerEd
             string subject = TextBoxSubject.Text;
             string topic = TextBoxTopic.Text;
             string link = TextBoxLink.Text;
-            string message = insertVideo(subject, topic, link);
-            lblMessage.Text = message;
-            
+            if (UrlIsValid(link))
+            {
+                rfvLink.ErrorMessage = "Link is not valid.";
+                string message = insertVideo(subject, topic, link);
+                lblMessage.Text = message;
+            }
         }
 
-        protected void btnClose_ClientClick(object sender, EventArgs e)
+        public static bool UrlIsValid(string url)
         {
-            Response.Write("<script>window.close();</" + "script>");
-            Response.End();
+            //check URL is valid URL
 
+            //then check URL is embed URL
+
+            return true;
         }
 
         private string insertVideo(string subject, string topic, string link)
         {
-            string sql = "INSERT INTO Videos Values(@link, @subject, @topic)";
-            SqlConnection cnn = new SqlConnection(connectionString);
-            SqlCommand command;
-            try
+            using (var conn = new SqlConnection(connectionString))
+            using (var command = new SqlCommand("sp_AddVideo", conn)
             {
-                cnn.Open();
-                command = new SqlCommand(sql, cnn);
-                command.CommandText = sql;
-                command.Parameters.AddWithValue("@subject", subject);
-                command.Parameters.AddWithValue("@topic", topic);
-                command.Parameters.AddWithValue("@link", link);
+                CommandType = CommandType.StoredProcedure
+            })
+            {
+                command.Parameters.AddWithValue("@Subject", subject);
+                command.Parameters.AddWithValue("@Topic", topic);
+                command.Parameters.AddWithValue("@Link", link);
+                conn.Open();
                 command.ExecuteNonQuery();
-                cnn.Close();
                 return "Video Added Successfully!";
-
-            }
-            catch (Exception ex)
-            {
-                return "Video Could Not Be Added.";
-                throw ex;
             }
 
         }
