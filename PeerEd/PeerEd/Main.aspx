@@ -51,6 +51,64 @@
           vertical-align: middle;
         }
 
+        /* Style the top navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            /* Style the navigation bar */
+            .navbar h2 {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+            }
+
+                /* Right-aligned navbar item */
+                .navbar h2.right {
+                    float: right;
+                }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+            
+        .navbar-default {
+            background-image: -webkit-linear-gradient(top, #ffffff 0%, #f8f8f8 100%);
+            background-image: -o-linear-gradient(top, #ffffff 0%, #f8f8f8 100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f8f8f8));
+            background-image: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+        }
+
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .active > a {
+                background-image: -webkit-linear-gradient(top, #dbdbdb 0%, #e2e2e2 100%);
+                background-image: -o-linear-gradient(top, #dbdbdb 0%, #e2e2e2 100%);
+                background-image: -webkit-gradient(linear, left top, left bottom, from(#dbdbdb), to(#e2e2e2));
+                background-image: linear-gradient(to bottom, #dbdbdb 0%, #e2e2e2 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdbdbdb', endColorstr='#ffe2e2e2', GradientType=0);
+                background-repeat: repeat-x;
+                -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
+                box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
+            }
+
+        .navbar-brand,
+        .navbar-nav > li > a {
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
     </style>
 
 </head>
@@ -59,13 +117,12 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" runat="server" href="~/">PeerEd</a>
+                    <a class="navbar-brand" runat="server" href="StudentLand.html"><h1>PeerEd</h1></a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/StudentLand.html">Home</a></li>
-                        <li><a runat="server" href="~/Main.aspx">Current</a></li>
-                    </ul>
+                        <h2><a runat="server" href="Main.aspx">Upload a Video</a></h2>
+                        <h2><a runat="server" href="Main.aspx">Watch a Video</a></h2>
+                        <h2><a runat="server" href="Main.aspx">History</a></h2>
                 </div>
             </div>
         </div>
