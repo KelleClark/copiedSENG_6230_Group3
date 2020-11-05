@@ -120,8 +120,8 @@
                     <a class="navbar-brand" runat="server" href="StudentLand.html"><h1>PeerEd</h1></a>
                 </div>
                 <div class="navbar-collapse collapse">
-                        <h2><a runat="server" href="Main.aspx">Upload a Video</a></h2>
-                        <h2><a runat="server" href="Main.aspx">Watch a Video</a></h2>
+                        <h2><a runat="server" href="Main.aspx">Upload Video</a></h2>
+                        <h2><a runat="server" href="Main.aspx">Watch Video</a></h2>
                         <h2><a runat="server" href="Main.aspx">History</a></h2>
                 </div>
             </div>
