@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Testing for a new page for Student After Login</title>
+
+    <style type="text/css">
+        /* Header/logo Title */
+        .pageHeader {
+            padding: 80px;
+            text-align: center;
+            background: #1abc9c;
+            color: white;
+        }
+
+            /* Increase the font size of the heading */
+            .pageHeader h1 {
+                font-size: 40px;
+            }
+
+        /* Style the top navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            /* Style the navigation bar */
+            .navbar h2 {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+            }
+
+                /* Right-aligned navbar item */
+                .navbar h2.right {
+                    float: right;
+                }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+            
+        .navbar-default {
+            background-image: -webkit-linear-gradient(top, #ffffff 0%, #f8f8f8 100%);
+            background-image: -o-linear-gradient(top, #ffffff 0%, #f8f8f8 100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f8f8f8));
+            background-image: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+        }
+
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .active > a {
+                background-image: -webkit-linear-gradient(top, #dbdbdb 0%, #e2e2e2 100%);
+                background-image: -o-linear-gradient(top, #dbdbdb 0%, #e2e2e2 100%);
+                background-image: -webkit-gradient(linear, left top, left bottom, from(#dbdbdb), to(#e2e2e2));
+                background-image: linear-gradient(to bottom, #dbdbdb 0%, #e2e2e2 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdbdbdb', endColorstr='#ffe2e2e2', GradientType=0);
+                background-repeat: repeat-x;
+                -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
+                box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.075);
+            }
+
+        .navbar-brand,
+        .navbar-nav > li > a {
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+    </style>
+    
+
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <h2><a class="navbar-brand" runat="server" href="StudentLand.html">PeerEd</a></h2>
+            </div>
+            <div class="navbar">
+                <h2><a class="active" runat="server" href="StudentLand.html">Home</a></h2>
+                <h2 class="right"><a class="active" runat="server" href="Main.aspx">Login</a></h2>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="pageHeader">
+        <h1>PeerEd</h1>
+        <p>A website created by students for students.</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Watch to Learn</h2>
+                <p>
+                    PeerEd lets you Watch Videos, choosing peer made videos from a library.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>Upload Your Own Learning Videos</h2>
+                <p>
+                    PeerEd lets you upload your videos explaining Math and Computer Science to others.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>Share Your Videos with Others</h2>
+                <p>
+                    As an Acadmic Advisor, you can share playlists of learning videos with others.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+ </html >

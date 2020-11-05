@@ -56,6 +56,19 @@
 </head>
 
 <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" runat="server" href="~/">PeerEd</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/StudentLand.html">Home</a></li>
+                        <li><a runat="server" href="~/Main.aspx">Current</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     <form id="form1" runat="server">
         <div class="pageHeader">
             <h1>PeerEd</h1>

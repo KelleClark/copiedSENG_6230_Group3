@@ -71,6 +71,7 @@
     <Content Include="App_Data\VideoDatabase_log.ldf">
       <DependentUpon>VideoDatabase.mdf</DependentUpon>
     </Content>
+    <Content Include="StudentLand.html" />
     <Content Include="Web.config" />
     <Content Include="Main.aspx" />
   </ItemGroup>
