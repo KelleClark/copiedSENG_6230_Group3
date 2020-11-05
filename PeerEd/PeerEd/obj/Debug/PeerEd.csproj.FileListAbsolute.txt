@@ -52,7 +52,6 @@ C:\Users\DAVISS17\source\repos\SENG_6230_Group3\PeerEd\PeerEd\bin\roslyn\VBCSCom
 C:\Users\DAVISS17\source\repos\SENG_6230_Group3\PeerEd\PeerEd\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\DAVISS17\source\repos\SENG_6230_Group3\PeerEd\PeerEd\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\DAVISS17\source\repos\SENG_6230_Group3\PeerEd\PeerEd\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\DAVISS17\source\repos\SENG_6230_Group3\PeerEd\PeerEd\obj\Debug\PeerEd.csprojAssemblyReference.cache
 C:\Users\DAVISS17\source\repos\SENG_6230_Group3\PeerEd\PeerEd\obj\Debug\PeerEd.csproj.CoreCompileInputs.cache
 C:\Users\DAVISS17\source\repos\SENG_6230_Group3\PeerEd\PeerEd\obj\Debug\PeerEd.csproj.CopyComplete
 C:\Users\DAVISS17\source\repos\SENG_6230_Group3\PeerEd\PeerEd\obj\Debug\PeerEd.dll
