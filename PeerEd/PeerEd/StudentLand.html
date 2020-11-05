@@ -87,8 +87,13 @@
                 <h2><a class="navbar-brand" runat="server" href="StudentLand.html">PeerEd</a></h2>
             </div>
             <div class="navbar">
-                <h2><a class="active" runat="server" href="StudentLand.html">Home</a></h2>
-                <h2 class="right"><a class="active" runat="server" href="Main.aspx">Login</a></h2>
+                <div class="login-container">
+                    <form action="Main.aspx">
+                        <input type="text" placeholder="Username" name="username">
+                        <input type="text" placeholder="Password" name="psw">
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
