@@ -114,3 +114,4 @@ C:\Users\17046\source\repos\SENG_6230_Group3\PeerEd\PeerEd\obj\Debug\PeerEd.cspr
 C:\Users\17046\source\repos\SENG_6230_Group3\PeerEd\PeerEd\obj\Debug\PeerEd.csproj.CopyComplete
 C:\Users\17046\source\repos\SENG_6230_Group3\PeerEd\PeerEd\obj\Debug\PeerEd.dll
 C:\Users\17046\source\repos\SENG_6230_Group3\PeerEd\PeerEd\obj\Debug\PeerEd.pdb
+C:\Users\17046\source\repos\SENG_6230_Group3\PeerEd\PeerEd\obj\Debug\PeerEd.csprojAssemblyReference.cache
