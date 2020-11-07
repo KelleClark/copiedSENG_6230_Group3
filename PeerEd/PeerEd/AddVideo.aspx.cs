@@ -27,19 +27,28 @@ namespace PeerEd
             string link = TextBoxLink.Text;
             if (UrlIsValid(link))
             {
-                rfvLink.ErrorMessage = "Link is not valid.";
                 string message = insertVideo(subject, topic, link);
                 lblMessage.Text = message;
+            }
+            else
+            {
+                lblMessage.Text = "URL is not valid, only Youtube embed links are allowed.";
             }
         }
 
         public static bool UrlIsValid(string url)
         {
-            //check URL is valid URL
+            //NOTE: there are soo many pot holes when checking validity of url
 
-            //then check URL is embed URL
+            if (url.IndexOf("https://www.youtube.com/") >= 0)
+            {
+                if (url.IndexOf("/embed/") >= 0)
+                {
+                    return true;
+                }
+            }
 
-            return true;
+            return false;
         }
 
         private string insertVideo(string subject, string topic, string link)
