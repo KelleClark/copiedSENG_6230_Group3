@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddVideo.aspx" />
     <Content Include="App_Data\VideoDatabase.mdf" />
     <Content Include="App_Data\VideoDatabase_log.ldf">
       <DependentUpon>VideoDatabase.mdf</DependentUpon>
@@ -76,6 +77,13 @@
     <Content Include="Main.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddVideo.aspx.cs">
+      <DependentUpon>AddVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddVideo.aspx.designer.cs">
+      <DependentUpon>AddVideo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>

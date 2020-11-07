@@ -17,32 +17,67 @@ namespace PeerEd
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            List<string> subjectList = new List<string>();
+            subjectList = getSubjects();
+            ddlSubject.DataSource = subjectList;
+
+            List<string> topicList = new List<string>();
+            topicList = getTopics();
+            ddlTopic.DataSource = topicList;
+
+            if (!IsPostBack)
+            {
+                ddlSubject.DataBind();
+                ddlTopic.DataBind();
+            }
+
             selectedSubject = ddlSubject.SelectedItem.Text;
             selectedTopic = ddlTopic.SelectedItem.Text;
-            GridView1.DataSource = getVideos(selectedSubject, selectedTopic);
-            GridView1.DataBind();
+            
+            Panel1.Controls.Clear();
+            embedVideos();
+
+            
+        }
+
+        protected void embedVideos()
+        {
+            List<string> videoList = new List<string>();
+            videoList = getVideosAttribute(selectedSubject, selectedTopic, "Link");
+
+            if(videoList.Count != 0)
+            {
+                for (int i = 0; i < videoList.Count(); i++)
+                {
+                    var videoFrame = new Literal();
+                    videoFrame.Text = string.Format(@"<iframe width=""560"" height=""340"" src=""{0}"" frameborder=""0"" allowfullscreen></iframe>", videoList[i]);
+                    Panel1.Controls.Add(videoFrame);
+                    Panel1.Controls.Add(new LiteralControl("<br /> <br />"));
+                }
+            }              
         }
 
         protected void ddlTopic_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedTopic = ddlTopic.SelectedItem.Text;
-            List<string> videoList = new List<string>();
-            videoList = getVideos(selectedSubject, selectedTopic);
-            GridView1.DataSource = videoList;
-            GridView1.DataBind();
+            Panel1.Controls.Clear();
+            embedVideos();
 
         }
 
         protected void ddlSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedSubject = ddlSubject.SelectedItem.Text;
+            selectedSubject = ddlSubject.SelectedItem.Text;
+            Panel1.Controls.Clear();
+            embedVideos();
         }
 
-        private List<string> getVideos(string subject, string topic)
+        private List<string> getVideosAttribute(string subject, string topic, string attribute)
         {
             List<string> videoList = new List<string>();
 
-            string sql = "SELECT Title FROM Videos WHERE Subject = @subject AND Topic =  @topic";
+            string sql = "SELECT " + attribute + " FROM Videos INNER JOIN Topics ON Videos.Topic_ID = Topics.Topic_ID WHERE Subject = @subject AND Name =  @topic";
+
             SqlConnection cnn = new SqlConnection(connectionString);
             SqlDataReader dataReader;
             SqlCommand command;
@@ -62,12 +97,74 @@ namespace PeerEd
                 cnn.Close();
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
 
             return videoList;
+        }
+
+        private List<string> getSubjects()
+        {
+            List<string> subjectList = new List<string>();
+
+            string sql = "SELECT DISTINCT Subject FROM Videos";
+
+            SqlConnection cnn = new SqlConnection(connectionString);
+            SqlDataReader dataReader;
+            SqlCommand command;
+            try
+            {
+                cnn.Open();
+                command = new SqlCommand(sql, cnn);
+                dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    subjectList.Add(dataReader.GetValue(0).ToString());
+                }
+                dataReader.Close();
+                command.Dispose();
+                cnn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return subjectList;
+        }
+
+        private List<string> getTopics()
+        {
+            List<string> topicList = new List<string>();
+
+            string sql = "SELECT DISTINCT Name FROM Topics ";
+
+            SqlConnection cnn = new SqlConnection(connectionString);
+            SqlDataReader dataReader;
+            SqlCommand command;
+            try
+            {
+                cnn.Open();
+                command = new SqlCommand(sql, cnn);
+                dataReader = command.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    topicList.Add(dataReader.GetValue(0).ToString());
+                }
+                dataReader.Close();
+                command.Dispose();
+                cnn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return topicList;
         }
     }
 }
