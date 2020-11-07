@@ -5,17 +5,78 @@
     <title>Testing for a new page for Student After Login</title>
 
     <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+            border: 0px;
+        }
         /* Header/logo Title */
         .pageHeader {
             padding: 80px;
             text-align: center;
-            background: #1abc9c;
-            color: white;
+            background: #8C2D3B;
+            /*  min-height: 100%;
+            background-image: url(logo.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;*/
         }
 
             /* Increase the font size of the heading */
             .pageHeader h1 {
                 font-size: 40px;
+                color: white;
             }
 
         /* Style the top navigation bar */
@@ -86,7 +147,7 @@
             <div class="navbar-header">
                 <h2><a class="navbar-brand" runat="server" href="StudentLand.html">PeerEd</a></h2>
             </div>
-            <div class="navbar">
+            <div class="navbar" class="right">
                 <div class="login-container">
                     <form action="Main.aspx">
                         <input type="text" placeholder="Username" name="username">
@@ -95,30 +156,39 @@
                     </form>
                 </div>
             </div>
+            <div>
+                <h2 class="right"><a runtat="server" href="Main.aspx">Sign Up</a></h2>
+            </div>
         </div>
     </div>
 
 
-
-    <div class="pageHeader">
-        <h1>PeerEd</h1>
-        <p>A website created by students for students.</p>
+    <div class="row">
+        <div class="col-9">
+            <div class="pageHeader">
+                 <h1>PeerEd</h1>
+                <p>A website created by students for students.</p>
+            </div>
+        </div>
+        <div class="col-3">
+            <img src="logo.jpg">
+        </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-4">
                 <h2>Watch to Learn</h2>
                 <p>
                     PeerEd lets you Watch Videos, choosing peer made videos from a library.
                 </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-4">
                 <h2>Upload Your Own Learning Videos</h2>
                 <p>
                     PeerEd lets you upload your videos explaining Math and Computer Science to others.
                 </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-4">
                 <h2>Share Your Videos with Others</h2>
                 <p>
                     As an Acadmic Advisor, you can share playlists of learning videos with others.
