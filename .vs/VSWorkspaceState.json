@@ -2,7 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\PeerEd",
-    "\\PeerEd\\PeerEd"
+    "\\PeerEd\\PeerEd",
+    "\\PeerEd\\PeerEd\\App_Data"
   ],
   "SelectedNode": "\\PeerEd\\PeerEd.sln",
   "PreviewInSolutionExplorer": false
