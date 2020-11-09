@@ -1,13 +1,7 @@
-﻿<%@ Page Language="C#"  AutoEventWireup="true" CodeBehind="StudentLand.aspx.cs" Inherits="PeerEd.WebForm"3%>
+﻿<%@ Page Language="C#"  AutoEventWireup="true" CodeBehind="StudentLand.aspx.cs" Inherits="PeerEd.WebForm3"%>
 
 <!DOCTYPE html>
-<script type="text/javascript">
 
-    function Unnamed_Click()
-    {
-        javascript: window.open("Main.aspx");
-    }
-</script>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -147,8 +141,8 @@
             <div class="navbar, right">
                 <div class="login-container">
                     <form id="login" runat="server">
-                        <asp:TextBox runat="server" placeholder="Username" name="username"></asp:TextBox>
-                        <asp:TextBox runat="server" placeholder="Password" name="psw"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxUsername" runat="server" placeholder="Username"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxPsswrd" runat="server" placeholder="Password"></asp:TextBox>
                         <asp:Button runat="server" OnClick="Unnamed_Click">Login</asp:Button>
                     </form>
                 </div>
