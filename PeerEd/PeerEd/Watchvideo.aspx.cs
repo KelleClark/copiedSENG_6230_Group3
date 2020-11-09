@@ -52,7 +52,12 @@ namespace PeerEd
                     var videoFrame = new Literal();
                     videoFrame.Text = string.Format(@"<iframe width=""560"" height=""340"" src=""{0}"" frameborder=""0"" allowfullscreen></iframe>", videoList[i]);
                     Panel1.Controls.Add(videoFrame);
-                    Panel1.Controls.Add(new LiteralControl("<br /> <br />"));
+                    Panel1.Controls.Add(new LiteralControl("&nbsp;&nbsp;&nbsp;"));
+                    if (((i+1)%3) == 0)
+                    {
+                        Panel1.Controls.Add(new LiteralControl("<br /> <br />"));
+                    }
+                    
                 }
             }              
         }

@@ -149,64 +149,74 @@
         }
     </style>
     
+    <script>
+        
+        function openPopupWindow() {  
+            //Open the popup page  
+            window.open('SignUp.aspx', 'SignUp', 'resizable=no,width=400,height=400');  
+        }  
+    </script> 
 
 </head>
 <body>
-    <div class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <h2><a class="navbar-brand" runat="server" href="StudentLand.html">PeerEd</a></h2>
-            </div>
-            <div class="navbar, right">
-                <div class="login-container">
-                    <form action="Main.aspx" runat="server">
-                        <asp:textbox runat="server" ID="textBoxUsername" placeholder="Username"/>
-                        <asp:textbox runat="server" ID="textBoxPassword" placeholder="Password"/>
-                        <asp:Button runat="server" ID="btnLogin" Text="Login"/>
-                    </form>
+    <form id="body" runat="server">
+        <div class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <h2><a class="navbar-brand" runat="server" href="StudentLand.aspx">PeerEd</a></h2>
+                </div>
+                <div class="navbar, right">
+                    <div class="login-container">
+                            <asp:textbox runat="server" ID="textBoxUsername" placeholder="Username"/>
+                            <asp:requiredfieldvalidator id="rfvUsername" runat="server" errormessage="*" ForeColor="Red" controltovalidate="textBoxUsername"></asp:requiredfieldvalidator>
+                            <asp:textbox runat="server" ID="textBoxPassword" placeholder="Password" TextMode="Password"/>
+                            <asp:requiredfieldvalidator id="rfvPassword" runat="server" errormessage="*" ForeColor="Red" controltovalidate="textBoxPassword"></asp:requiredfieldvalidator>
+                            <asp:Button runat="server" ID="btnLogin" Text="Login" onclick="btnLogin_Click"/>
+                            <asp:Button ID="btnSignUp" CssClass="right" runat="server" Text="Sign Up" OnClientClick="openPopupWindow();return false;" />
+                            
+                    </div>
+                </div>
+                <div>
+                    <asp:Label runat="server" ID="lblLoginMessage" />
                 </div>
             </div>
-            <div>
-                <h2 class="right"><a runat="server" href="Main.aspx">Sign Up</a></h2>
-            </div>
         </div>
-    </div>
 
 
-    <div class="row">
-        <div class="col-9">
-            <div class="pageHeader">
-                 <h1>PeerEd</h1>
-                <h2>A website for students to upload, view and share educational videos.</h2>
-                <a class="navbar-brand" runat="server" href="AboutUs.html"><h2>Learn More</h2></a>
-            </div>
-        </div>
-        <div class="col-3">
-            <img src="logo.jpg" />
-        </div>
-    </div>
-    <div class="container">
         <div class="row">
-            <div class="col-4">
-                <h2>Watch to Learn</h2>
-                <p>
-                    PeerEd lets you Watch Videos, choosing peer made videos from a library.
-                </p>
+            <div class="col-9">
+                <div class="pageHeader">
+                     <h1>PeerEd</h1>
+                    <h2>A website for students to upload, view and share educational videos.</h2>
+                    <a class="navbar-brand" runat="server" href="AboutUs.aspx"><h2>Learn More</h2></a>
+                </div>
             </div>
-            <div class="col-4">
-                <h2>Upload Your Own Learning Videos</h2>
-                <p>
-                    PeerEd lets you upload your videos explaining Math and Computer Science to others.
-                </p>
-            </div>
-            <div class="col-4">
-                <h2>Share Your Videos with Others</h2>
-                <p>
-                    As an Acadmic Advisor, you can share playlists of learning videos with others.
-                </p>
+            <div class="col-3">
+                <img src="logo.jpg" />
             </div>
         </div>
-    </div>
-
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h2>Watch to Learn</h2>
+                    <p>
+                        PeerEd lets you Watch Videos, choosing peer made videos from a library.
+                    </p>
+                </div>
+                <div class="col-4">
+                    <h2>Upload Your Own Learning Videos</h2>
+                    <p>
+                        PeerEd lets you upload your videos explaining Math and Computer Science to others.
+                    </p>
+                </div>
+                <div class="col-4">
+                    <h2>Share Your Videos with Others</h2>
+                    <p>
+                        As an Acadmic Advisor, you can share playlists of learning videos with others.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
 </body>
 </html>

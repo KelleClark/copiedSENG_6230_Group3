@@ -67,26 +67,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AboutUs.html" />
+    <Content Include="AboutUs.aspx" />
     <Content Include="AddVideo.aspx" />
     <Content Include="App_Data\VideoDatabase.mdf" />
     <Content Include="App_Data\VideoDatabase_log.ldf">
       <DependentUpon>VideoDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="logo.jpg" />
+    <Content Include="SignUp.aspx" />
     <Content Include="StudentLand.aspx" />
     <Content Include="Watchvideo.aspx" />
-    <Content Include="StudentLand.html" />
     <Content Include="Web.config" />
     <Content Include="Main.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddVideo.aspx.cs">
       <DependentUpon>AddVideo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AddVideo.aspx.designer.cs">
       <DependentUpon>AddVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentLand.aspx.cs">
       <DependentUpon>StudentLand.aspx</DependentUpon>

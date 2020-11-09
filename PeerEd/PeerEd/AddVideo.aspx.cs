@@ -29,10 +29,12 @@ namespace PeerEd
             {
                 string message = insertVideo(subject, topic, link);
                 lblMessage.Text = message;
+                lblMessage.ForeColor = System.Drawing.Color.Green;
             }
             else
             {
                 lblMessage.Text = "URL is not valid, only Youtube embed links are allowed.";
+                lblMessage.ForeColor = System.Drawing.Color.Red;
             }
         }
 
