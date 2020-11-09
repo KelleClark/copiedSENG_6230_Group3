@@ -18,10 +18,13 @@ namespace PeerEd
         string username = "";
         string psswrd = ""
 
-        protected void ddlloginbutton_clicked(object sender, EventArgs e)
+        protected void Unnamed_Click(object sender, EventArgs e)
         {
         username = "" ;
         psswrd = "";
+
+        username = TextBoxUsername.Text;
+        psswrd = TextBoxPsswrd.Text;
 
         }
 
