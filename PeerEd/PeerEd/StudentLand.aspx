@@ -1,12 +1,10 @@
-﻿<%@ Page Language="C#"  AutoEventWireup="true" CodeBehind="StudentLand.aspx.cs" Inherits="PeerEd.WebForm3"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentLand.aspx.cs" Inherits="PeerEd.StudentLand" %>
 
 <!DOCTYPE html>
 
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta charset="utf-8" />
-    
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
     <title>PeerEd Landing</title>
 
     <style type="text/css">
@@ -14,7 +12,14 @@
             box-sizing: border-box;
         }
 
-       
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
         .col-3 {
             width: 25%;
         }
@@ -23,19 +28,32 @@
             width: 33.33%;
         }
 
-       
+        .col-5 {
+            width: 41.66%;
+        }
 
         .col-6 {
             width: 50%;
         }
 
-       
+        .col-7 {
+            width: 58.33%;
+        }
+
         .col-8 {
             width: 66.66%;
         }
 
         .col-9 {
             width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
         }
 
         .col-12 {
@@ -131,24 +149,25 @@
         }
     </style>
     
+
 </head>
 <body>
-     <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <h2><a class="navbar-brand" runat="server" href="StudentLand.html">PeerEd</a></h2>
             </div>
             <div class="navbar, right">
                 <div class="login-container">
-                    <form id="login" runat="server">
-                        <asp:TextBox ID="TextBoxUsername" runat="server" placeholder="Username"></asp:TextBox>
-                        <asp:TextBox ID="TextBoxPsswrd" runat="server" placeholder="Password"></asp:TextBox>
-                        <asp:Button runat="server" OnClick="Unnamed_Click">Login</asp:Button>
+                    <form action="Main.aspx" runat="server">
+                        <asp:textbox runat="server" ID="textBoxUsername" placeholder="Username"/>
+                        <asp:textbox runat="server" ID="textBoxPassword" placeholder="Password"/>
+                        <asp:Button runat="server" ID="btnLogin" Text="Login"/>
                     </form>
                 </div>
             </div>
             <div>
-                <h2 class="right"><a runtat="server" href="Main.aspx">Sign Up</a></h2>
+                <h2 class="right"><a runat="server" href="Main.aspx">Sign Up</a></h2>
             </div>
         </div>
     </div>
@@ -163,7 +182,7 @@
             </div>
         </div>
         <div class="col-3">
-            <img src="logo.jpg">
+            <img src="logo.jpg" />
         </div>
     </div>
     <div class="container">
@@ -188,6 +207,6 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 </html>
