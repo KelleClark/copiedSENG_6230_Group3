@@ -203,7 +203,7 @@
         <div class="row">
             <div class="navbar-header">
                 <div class="col-3">
-                    <h2><a class="navbar-brand" runat="server" href="StudentLand.html">PeerEd</a></h2>
+                    <h2><a class="navbar-brand" runat="server" href="StudentLand.aspx">PeerEd</a></h2>
                 </div>
                 <div class="col-6">
 
